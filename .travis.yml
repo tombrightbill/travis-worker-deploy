@@ -8,5 +8,6 @@ before_deploy:
 deploy:
   provider: script
   script: node deploy.js
+  skip_cleanup: true
   on:
     branch: master
