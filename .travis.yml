@@ -13,6 +13,6 @@ deploy:
     branch: master
 
 addons:
-  artifacts: true
+  artifacts: 
     s3_region: "us-east-1"
     debug: true
