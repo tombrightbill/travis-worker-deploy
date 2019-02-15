@@ -13,7 +13,7 @@
 const cloudflare = require('cloudflare-workers-toolkit')
 
 const fs = require('fs')
-const worker = fs.readFileSync('../worker.js', "utf8")
+const worker = fs.readFileSync('./worker.js', "utf8")
 
 
 //cloudflare.setAccountId('390226513f11a1cb8815f2009cbc5576')
