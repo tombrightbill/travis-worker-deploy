@@ -14,5 +14,6 @@ deploy:
 
 addons:
   artifacts: 
-    s3_region: us-east-1
     debug: true
+    bucket: travis-ci-artifact-bucket
+    s3_region: us-east-1
