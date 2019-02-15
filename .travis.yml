@@ -13,5 +13,4 @@ deploy:
     branch: master
 
 addons:
-  artifacts:
-    debug: true
+  artifacts: true
