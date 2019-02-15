@@ -1,3 +1,3 @@
 addEventListener('fetch', event => {
-  event.respondWith(new Response('built again with skip_cleanup: true!'))
+  event.respondWith(new Response('artificats pushed to S3!'))
 })
