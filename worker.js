@@ -1,3 +1,3 @@
 addEventListener('fetch', event => {
-  event.respondWith(new Response('auto deploy from travis success build!'))
+  event.respondWith(new Response('built again with skip_cleanup: true!'))
 })
