@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+ - "node"
+
+before_deploy:
+  - npm install -g --silent
+
+deploy:
+  provider: script
+  script: node scripts/deploy.js
+  on:
+    branch: master
