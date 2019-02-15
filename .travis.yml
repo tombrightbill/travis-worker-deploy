@@ -7,6 +7,6 @@ before_deploy:
 
 deploy:
   provider: script
-  script: node scripts/deploy.js
+  script: node deploy.js
   on:
     branch: master
