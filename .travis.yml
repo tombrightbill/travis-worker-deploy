@@ -11,3 +11,7 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+
+addons:
+  artifacts:
+    debug: true
