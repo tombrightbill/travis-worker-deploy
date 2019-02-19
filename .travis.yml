@@ -11,9 +11,11 @@ deploy:
   #skip_cleanup: true
   on:
     branch: master
+  provider: script
+  script: "bash ls -la"
+  on:
+    branch: master
 
-after_deploy:
-  script: `ls -la`
 
 addons:
   artifacts: 
