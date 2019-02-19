@@ -8,9 +8,12 @@ before_deploy:
 deploy:
   provider: script
   script: node deploy.js
-  skip_cleanup: true
+  #skip_cleanup: true
   on:
     branch: master
+
+after_deploy:
+  script: `ls -la`
 
 addons:
   artifacts: 
