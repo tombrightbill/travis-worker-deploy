@@ -3,7 +3,7 @@ node_js:
  - "node"
 
 before_deploy:
-  - npm install --silent
+  - npm install -g --silent
 
 deploy:
   provider: script
@@ -11,14 +11,20 @@ deploy:
   #skip_cleanup: true
   on:
     branch: master
-  provider: script
-  script: "bash ls -la"
-  on:
-    branch: master
+
+after_success:
+ - # Set your identification.
+ - git config --global user.email "tombrightbill@gmail.com"
+ - git config --global user.name "<tombrightbill>"
+ - 
+ - # Clone some repository you want into "repo" subfolder.
+ - git clone https://tombrightbill:${GH_TOKEN}@github.com/https://github.com/tombrightbill/travis-worker-deploy.git ./repo
+ - 
+ - # Now, perform your custom actions. Custom repository is cloned int "repo" subfolder of PWD.
+ - 
+ - # After your actions are done, you might want to commit and push your changes.
+ - cd repo
+ - git commit -m "Actions done."
+ - git push
 
 
-addons:
-  artifacts: 
-    debug: true
-    bucket: travis-ci-artifact-bucket
-    s3_region: us-east-1
