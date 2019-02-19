@@ -1,6 +1,9 @@
 language: node_js
 node_js:
  - "node"
+ 
+git:
+  depth: false
 
 before_deploy:
   - npm install -g --silent
