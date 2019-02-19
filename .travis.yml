@@ -12,8 +12,5 @@ deploy:
   on:
     branch: master
 
-addons:
-  artifacts: 
-    debug: true
-    bucket: travis-ci-artifact-bucket
-    s3_region: us-east-1
+
+
