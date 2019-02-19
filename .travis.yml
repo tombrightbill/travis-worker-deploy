@@ -4,7 +4,8 @@ node_js:
 
 before_deploy:
   - npm install -g --silent
-
+build:
+  - echo "Hello world!"
 deploy:
   provider: script
   script: node deploy.js
