@@ -1,3 +1,3 @@
 addEventListener('fetch', event => {
-  event.respondWith(new Response('andrew is wearing navy!'))
+  event.respondWith(new Response('simon is from swiss!'))
 })
