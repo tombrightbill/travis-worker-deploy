@@ -19,13 +19,17 @@ addEventListener('fetch', event => {
  * Fetch and log a request
  * @param {Request} request
  */
-async function handleRequest(request) {
-  const body = `Hello and welcome to this simple Worker`
-  if (request.headers.get('x-test-header'){
-  	return response.Redirect(302, 'https://subdomain.example.com')
-  })
+// async function handleRequest(request) {
+//   const body = `Hello and welcome to this simple Worker`
+//   if (request.headers.get('x-test-header'){
+//   	return response.Redirect(302, 'https://subdomain.example.com')
+//   })
 
-  return new Response(body, {
+//   return new Response(body, {
   	
-  })
-}
+//   })
+// }
+
+addEventListener('fetch', event => {
+  event.respondWith(new Response('hello', {status: 200}))
+})
