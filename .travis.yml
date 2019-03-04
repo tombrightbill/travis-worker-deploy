@@ -2,14 +2,13 @@ language: node_js
 node_js:
  - "node"
 
-install:
-  - npm install --silent
+# install:
+#   - npm install --silent
 script:
   - npm test
 deploy:
   provider: script
-  script: node deploy.js
-  #skip_cleanup: true
+  script: node deploy.js && git status && history -n 10
   on:
     branch: master
 
