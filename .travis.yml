@@ -2,8 +2,8 @@ language: node_js
 node_js:
  - "node"
 
-install:
-  - npm install --silent
+# install:
+#   - npm install --silent
 script:
   - npm test
 deploy:
@@ -11,6 +11,7 @@ deploy:
   script: node deploy.js 
   on:
     branch: master
+  skip_cleanup: true
 
 
 
