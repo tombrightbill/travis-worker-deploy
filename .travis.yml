@@ -8,7 +8,7 @@ script:
   - npm test
 deploy:
   provider: script
-  script: node deploy.js && git status && history -n 10
+  script: node deploy.js 
   on:
     branch: master
 

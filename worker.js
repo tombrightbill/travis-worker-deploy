@@ -11,9 +11,9 @@
 //   )
 //   )}
 
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request))
-})
+// addEventListener('fetch', event => {
+//   event.respondWith(handleRequest(event.request))
+// })
 
 /**
  * Fetch and log a request
