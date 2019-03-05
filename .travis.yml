@@ -6,9 +6,9 @@ script:
   - npm test
 
 deploy:
-  - provider: script
-    script: node deploy.js 
-    skip_cleanup: true
+  provider: script
+  script: node deploy.js 
+  skip_cleanup: true
   on:
     branch: master
 
