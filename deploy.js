@@ -20,9 +20,8 @@ async function deployToCF()
   if (data.status == 200) {
   	console.log('Success')
   } else {
-  	//error handling
+  	throw new Error('Error Deploying Worker')
   }
-  //console.log(data);
 }
 
 deployToCF();
