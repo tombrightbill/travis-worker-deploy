@@ -2,14 +2,12 @@ language: node_js
 node_js:
  - "node"
 
-# install:
-#   - npm install --silent
 script:
   - npm test
+
 deploy:
   provider: script
-  # script: node deploy.js 
-  script: curl -vso /dev/null 'https://google.com'
+  script: node deploy.js 
   on:
     branch: master
   skip_cleanup: true
