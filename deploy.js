@@ -3,8 +3,7 @@ const fetch = require('node-fetch')
 const worker = fs.readFileSync('./worker.js', "utf8")
 
 
-async function deployToCF()
-{
+const deployToCF = async () => {
   const headers = {
   	'X-Auth-Key': process.env.CLOUDFLARE_AUTH_KEY,
   	'X-Auth-Email': process.env.CLOUDFLARE_AUTH_EMAIL,
@@ -15,12 +14,18 @@ async function deployToCF()
   // NOTE: this is the Enterprise URL, if you are using a self service account the endpoint is:
   // client/v4/zones/:zone_id/workers/script
   // An Enterprise account can have multiple scripts, each with a unique name (in this case 'deployed-from-travis')
-  let data = await fetch(url, {method: 'PUT', headers: headers, body: worker})
+  try { 
+	  let data = await fetch(url, {method: 'PUT', headers: headers, body: worker})
+	  let json = await data.json()
 
-  if (data.status == 200) {
-  	console.log('Success')
-  } else {
-  	throw new Error('Error Deploying Worker')
+	  if(data.status === 200) {
+	  	console.log('Success')
+	  } else {
+	  	throw new Error(`Deployment Failure, Status ${data.status}`)
+	  }
+  } catch(e) {
+ 	console.log(e)
+
   }
 }
 
