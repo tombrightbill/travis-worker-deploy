@@ -16,8 +16,8 @@ async function deployToCF()
   // client/v4/zones/:zone_id/workers/script
   // An Enterprise account can have multiple scripts, each with a unique name (in this case 'deployed-from-travis')
   let data = await fetch(url, {method: 'PUT', headers: headers, body: worker})
-  let main = await data.json();
-  console.log(main);
+  // let main = await data.json();
+  console.log(data);
 }
 
 deployToCF();
