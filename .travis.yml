@@ -7,7 +7,7 @@ script:
 
 deploy:
   provider: script
-  script: node deploy.js 
+  script: chmod +x deploy.js && node deploy.js 
   on:
     branch: master
   skip_cleanup: true
