@@ -15,16 +15,17 @@ const deployToCF = async () => {
   // client/v4/zones/:zone_id/workers/script
   try { 
 	  let data = await fetch(url, {method: 'PUT', headers: headers, body: worker})
+	  let json = await data.json()
 
 	  if(data.status === 200) {
 	  	console.log('Success')
+	  	console.log(JSON.stringify(json, undefined, 2))
 	  } else {
 	  	throw new Error(`Deployment Failure, Status ${data.status}`)
 	  }
   } catch(e) {
  	console.log(e)
- 	json = await data.json()
-	console.log(json)
+ 	console.log(JSON.stringify(json, undefined, 2))
  	process.exit(1) 
 
   }
