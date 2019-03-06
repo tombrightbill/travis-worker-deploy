@@ -50,7 +50,7 @@ const assert = require('assert')
 describe('Worker Test', async function() {
 
     it('returns a body that says hello', async function () {
-        var url = new URL('http://travis.tombrightbill.com')
+        var url = new URL('https://travis.tombrightbill.com')
         var req = new Request(url)
         var res = await fetch(req)
         var body = await res.text()
