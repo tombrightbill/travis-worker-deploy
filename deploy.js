@@ -14,8 +14,8 @@ const deployToCF = async () => {
   // NOTE: this is the Enterprise URL, if you are using a self service account the endpoint is:
   // client/v4/zones/:zone_id/workers/script
   try { 
-	  let data = await fetch(url, {method: 'PUT', headers: headers, body: worker})
-	  let json = await data.json()
+	  const data = await fetch(url, {method: 'PUT', headers: headers, body: worker})
+	  const json = await data.json()
 
 	  if(data.status === 200) {
 	  	console.log('Success')
@@ -25,7 +25,6 @@ const deployToCF = async () => {
 	  }
   } catch(e) {
  	console.log(e)
- 	console.log(JSON.stringify(json, undefined, 2))
  	process.exit(1) 
 
   }
