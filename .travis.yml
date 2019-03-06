@@ -7,7 +7,7 @@ script:
 
 deploy:
   - provider: script
-    script: echo 'in the deployment stanza'
+    script: node deploy.js
     skip_cleanup: true
     on:
       branch: master
