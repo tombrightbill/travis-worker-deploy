@@ -18,13 +18,13 @@ const deployToCF = async () => {
 
 	  if(data.status === 200) {
 	  	console.log('Success')
-	  	json = await data.json()
-	  	console.log(json)
 	  } else {
 	  	throw new Error(`Deployment Failure, Status ${data.status}`)
 	  }
   } catch(e) {
  	console.log(e)
+ 	json = await data.json()
+	console.log(json)
  	process.exit(1) 
 
   }
