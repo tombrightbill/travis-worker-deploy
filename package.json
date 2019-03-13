@@ -11,7 +11,7 @@
   "dependencies": {
     "@dollarshaveclub/cloudworker": "0.0.10",
     "cloudflare-workers-toolkit": "0.0.9",
-    "mocha": "^6.0.2",
     "node-fetch": "^2.3.0"
-  }
+  },
+  "devDependencies": {}
 }
