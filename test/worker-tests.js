@@ -4,7 +4,7 @@ before(async function () {
 
 const assert = require('assert')
 
-describe('Worker Test', async function() {
+describe('Worker Test', function() {
 
     it('Response with a body that says hello', async function () {
         var url = new URL('https://travis.tombrightbill.com')
